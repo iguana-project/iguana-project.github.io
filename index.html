@@ -1,10 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
 <div style="text-align:center" \>
 <img src="logo.svg" \>
+</div>
+</header>
+
+
+<div style="text-align:center" \>
 <h1>Iguana</h1>
-<p>Iguana is an open source issue management system with a kanban board, sprint planning <br \>
+<p>
+Iguana is an open source issue management system with a kanban board, sprint planning <br \>
 and timelogging features and anything else you need to make working on a project in groups pleasant.
 </p>
 <p>
 You can get in on <a href="https://github.com/iguana-project/iguana">github</a>
 </p>
 </div>
+
+
+<div id="content">
+<h2>Table of contents</h2>
+<nav>
+	<ul id="navigation">
+		<li><a href="#tl;dr">TL;DR</a></li>
+		<li><a href="#terms">Terms</a></li>
+			<ul id="terms-navigation">
+				<li><a href="#project">Project</a></li>
+				<li><a href="#issue">Issue</a></li>
+				<li><a href="#sprintboard">Sprintboard</a></li>
+				<li><a href="#backlog">Backlog</a></li>
+			</ul>
+		<li><a href="#features">Features</a></li>
+			<ul id="features-navigation">
+				<li><a href="#olea-bar">Olea-Bar</a></li>
+				<li><a href="#time-logging">Time-Logging</a></li>
+				<li><a href="#activity_stream">Activity stream</a></li>
+				<li><a href="#activity">Activity</a></li>
+				<li><a href="#integrations">Integrations</a></li>
+			</ul>
+		<li><a href="#limitations">Limitations</a></li>
+		<li><a href="#demonstration">Demonstration</a></li>
+			<ul id="demonstration-navigation">
+				<li><a href="#demo-olea">Olea-Bar</a></li>
+			</ul>
+		<li><a href="#known_issues">Known issues</a></li>
+		<li><a href="#plans">Plan of the future</a></li>
+	</ul>
+</div>
+</nav>
+
+
+<section id="tl;dr">
+<div id="content">
+<h2>TL;DR</h2>
+In contrast to other state of the art ticket systems, iguana has a strong focus on easily usable basic functions to help you to plan the next schedule and have always a nice overview about your current tasks depending on your needs. There is a kanban board to keep an eye on the progress until the end of the next planning stage and also a backlog to have the ability for scheduling of long-terms. In combination with a mechanism to log time spent individually on different tasks, this basic functionality is essentially it.
+</div>
+</section>
+
+
+
+<section id="terms">
+<div id="content">
+<h2>Terms</h2>
+To clarify this description some terms that we used shall be explained here.
+</div>
+
+
+<section id="project">
+<div id="content">
+<h3>Project</h3>
+A project is always the construct that encapsulates all metainformation about a concrete project.
+<ul>
+	<li>Who is member of a project? - distinguished between managers and developers having different permissions.</li>
+	<li>Which issues are connected to this project?</li>
+	<li>How much time has who worked on a project in total so far?</li>
+	<li>Which categories/tags does this project have?</li>
+</ul>
+</div>
+</section>
+
+<section id="issue">
+<div id="content">
+<h3>Issue</h3>
+An issue is always a part of a specific project and describes which tasks have to be, or already have been done.
+<ul>
+	<li>Which developer is working on an issue?</li>
+	<li>What kind of issue is it - either a bug, a task or a story?</li>
+	<li>When is the deadline of this issue?</li>
+	<li>Which priority does this issue have?</li>
+	<li>In which category/tag does this fit into?</li>
+	<li>How much time has who worked on this issue so far?</li>
+</ul>
+</div>
+</section>
+
+
+<section id="sprintboard">
+<div id="content">
+<h3>Sprintboard</h3>
+Within the sprintboard, that is basically a kanban board, you have an overview about the current sprint, which is the scheduling-entity. Each of those columns here represents a different progress-state of the assigned issues to see how much planned work has been completed or has not been started yet, visually accentuated by a progress bar.
+</div>
+</section>
+
+
+<section id="backlog">
+<div id="content">
+<h3>Backlog</h3>
+To keep an eye on long-term scheduling the backlog provides the possibility to create issues that should be done, but not necessarily within the current sprint. Also you can easily move issues from the backlog to a current or future sprint and vica versa.
+</div>
+</section>
+</section>
+
+
+<section id="features">
+<div id="content">
+<h2>Features</h2>
+The content behind this listing might become the reason for you to use iguana. :)
+</div>
+
+
+<section id="olea-bar">
+<div id="content">
+<h3>Olea-Bar</h3>
+The <em>O</em>ne <em>L</em>ine <em>E</em>dit <em>A</em>dd-<em>B</em>ar is the tool you probably will love the most about iguana, because it faciliates you to create and edit existing issues via comandline from both the sprintboard and backlog for the most comfortable way of adjustment. Therefore we wrote our own lexer and parser to handle our own language. For examples see the demonstration-section <a href="#demo-olea">below</a>.
+</div>
+</section>
+
+
+<section id="time-logging">
+<div id="content">
+<h3>Time-logging</h3>
+To log the time you worked on a specific issue there exists multiple ways and you can use whichever you prefer. You can start it either from the detail-view of an issue, from the general time-log-overview or by the punch in and punch out buttons, that automatically add the elapsed time between those button-hits to the amount of your logged time.
+</div>
+</section>
+
+
+<section id="activity_stream">
+<div id="content">
+<h3>Activity stream</h3>
+To stay up to date the latest actions on issues you are involved in appear on the start page and also in your personal profile page.
+</div>
+</section>
+
+
+<section id="activity">
+<div id="content">
+<h3>Activity</h3>
+This is the topic that summarises the two previous sections with the possibility to visualise them in different charts to be able to see trend of progress within a specific project.
+</div>
+</section>
+
+
+<section id="integrations">
+<div id="content">
+<h3>Integrations</h3>
+Currently we support git, the free and open source version control system, and slack, an instant messaging services to simplify your workflow and there are plans for additional integrations.
+</div>
+</section>
+</section>
+
+
+
+
+
+<section id="limitations">
+<div id="content">
+<h2>Limitations</h2>
+As stated out previously iguana focuses on the basic tools one need to manage a project with multiple developers. This means the hierarchy in general is flat and there are neither subtasks nor subprojects, but they are all on the same level. Even though the hierarchy is flat there is the possibility to create some dependencies between different tasks and theoretically the same applies for projects for example by choosing a unique preposition to sort projects by groups. But in case you really need sub-{issues,projects} iguana might not be the best tool for you.
+</div>
+
+<div id="content">
+The same holds for complex state-nexuses. Iguana does not provide the availability to specify that an issue has to be in a state <i>X</i> before it can be transfered into a state <i>Y</i>.
+</div>
+</section>
+
+
+
+<section id="demonstration">
+<div id="content">
+<h2>Demonstration</h2>
+TODO
+</div>
+
+<section id="demo-olea">
+<div id="content">
+<h3>Olea-Bar</h3>
+TODO
+</div>
+</section>
+</section>
+
+
+<section id="known_issues">
+<div id="content">
+<h2>Known issues</h2>
+TODO
+</div>
+</section>
+
+<section id="plans">
+<div id="content">
+<h2>Plan of the future</h2>
+TODO
+</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+	background-color: rgb(240, 240, 240);
+	color: rgb(40, 40, 40);
+}
+header{
+	background-color: #28393e;
+	border-color: #141c1f;
+	box-shadow: 0px 1px 5px 5px #888888;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	margin-bottom:50px;
+}
+
+
+a:link, a:visited {
+	color: #447e9b;
+	text-decoration: none;
+}
+
+h2{
+	margin-top: 70px;
+}
+
+#content{
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
+	text-align:left;
+}
+
