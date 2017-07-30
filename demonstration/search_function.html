@@ -33,6 +33,12 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 		<li><a href="index.html">Back to demonstration</a></li>
 		<li><a href="olea-bar.html">Olea-Bar</a></li>
 		<li><a href="search_function.html">Search function</a></li>
+		<ul>
+			<li><a href="#search_help">help</a></li>
+			<li><a href="#demo-search_issue_number">issue number</a></li>
+			<li><a href="#demo-search_regex">regex</a></li>
+			<li><a href="#demo-search_share_search_expressions">share search expression</a></li>
+		</ul>
 		<li><a href="activity.html">Activity overviews</a></li>
 		<li><a href="overviews.html">Overviews</a></li>
 	</ul>
@@ -42,10 +48,52 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 
 
 
-<section id="demo-olea">
+<section id="demo-search">
 <div class="content">
 <h3>Search function</h3>
-TODO
+Whenever you don't remember which syntax the search function has you can click the <a href="#search_help">help</a> where you also will be redirected to, in case of a search-request that produced an empty result.
+</div>
+
+<img src="pictures/search/search-help.png" alt="search help" class="picture_small" id="search_help">
+</section>
+
+
+<section id="demo-search_issue_number">
+<div class="content">
+<h3>Search example issue number</h3>
+This is an useful list because beside normal full-text search you can also access many elements of the data structure behind those elements to search for something in a more specific way. For example can we <a href="#search_pre_issue_number">search</a> for that issue with number 13 whereby the result is <a href="#search_post_issue_number">shown</a> correctly.
+
+<img src="pictures/search/issue_number/pre-search_issue_number.png" alt="search pre issue number" class="picture_small" id="search_pre_issue_number">
+<img src="pictures/search/issue_number/post-search_issue_number.png" alt="search post issue number" class="picture_small" id="search_post_issue_number">
+</div>
+</section>
+
+
+<section id="demo-search_regex">
+<div class="content">
+<h3>Search example regex</h3>
+There are way to many tools out there that are usable in multiple ways but don't provide the functionality to use regex for search functionalities so they are missing a more complex way to do so. In <a href="#search_pre_regex">this</a> example we search for Projects with a description that contains the word <em>demo</em>, which is true for the <a href="#search_pre_regex">result</a> because <em>demonstration</em> is part of the description there. You can also note the history of previous searches in the search-bar.
+
+
+<img src="pictures/search/regex/search-pre-regex.png" alt="search pre regex" class="picture" id="search_pre_regex">
+<img src="pictures/search/regex/search-post-regex-result.png" alt="search post regex" class="picture" id="search_post_regex">
+</div>
+</section>
+
+
+
+
+<section id="demo-search_share_search_expressions">
+<div class="content">
+<h3>Share search expressions</h3>
+Next to those list of previous searches iguana allows you to share your search expressions for a specific project to share common searches easily with other members of your team. In <a href="#search_expr_in_private_state">private state</a> all of our expressions aren't saved permanently yet, so we <a href="#search_expr_saved_now">save</a> the one we want to share. After that we are able to <a href="#search_expr_share_now">share</a> this expression with some projects. In this case we rename the filter to <em>priority==3 && number&#60 9</em> and share it with our <em>demonstration</em> project, where the filter indeed <a href="#search_expr_present_in_project">appears</a> and produces the desired <a href="#search_expr_search_result">output</a>.
+
+
+<img src="pictures/search/share_expressions/0_share_expr_in_private_state.png" alt="search expr in privte state" class="picture" id="search_expr_in_private_state">
+<img src="pictures/search/share_expressions/1_share_expr_saved_now.png" alt="search expr saved now" class="picture" id="search_expr_saved_now">
+<img src="pictures/search/share_expressions/2_share_expr_share_now.png" alt="search expr share now" class="picture" id="search_expr_share_now">
+<img src="pictures/search/share_expressions/3_share_expr_present_in_project.png" alt="search expr present in project" class="picture" id="search_expr_present_in_project">
+<img src="pictures/search/share_expressions/4_share_expr_search_result.png" alt="search expr search result" class="picture" id="search_expr_search_result">
 </div>
 </section>
 </body>

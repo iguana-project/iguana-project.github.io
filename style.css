@@ -38,3 +38,11 @@ img.picture {
 	margin-bottom: 50px;
 }
 
+img.picture_small {
+	width: 50%;
+	min-width: 1000px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
