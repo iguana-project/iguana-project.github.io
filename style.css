@@ -21,10 +21,20 @@ h2{
 	margin-top: 70px;
 }
 
-#content{
+div.content{
 	width: 80%;
 	max-width: 1000px;
 	margin: auto;
 	text-align:left;
+}
+
+
+img.picture {
+	width: 75%;
+	min-width: 1200px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	margin-bottom: 50px;
 }
 
