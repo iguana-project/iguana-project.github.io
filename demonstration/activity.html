@@ -17,7 +17,7 @@
 <h1>Iguana</h1>
 <p>
 Iguana is an open source issue management system with a kanban board, sprint planning <br \>
-and timelogging features, and anything else you need to make working on a project in groups pleasant.
+and time logging features, and anything else you need to make working on a project in groups pleasant.
 </p>
 <p>
 You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
@@ -33,7 +33,12 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 		<li><a href="index.html">Back to demonstration</a></li>
 		<li><a href="olea-bar.html">Olea-Bar</a></li>
 		<li><a href="search_function.html">Search function</a></li>
-		<li><a href="activity.html">Activity overviews</a></li>
+		<li><a href="activity.html">Activity</a></li>
+		<ul>
+			<li><a href="#demo-activity_overview">Activity overview</a></li>
+			<li><a href="#demo-activity_streams">Activity streams</a></li>
+		</ul>
+		<li><a href="time_logging.html">Time logging</a></li>
 		<li><a href="overviews.html">Overviews</a></li>
 	</ul>
 </nav>
@@ -42,11 +47,30 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 
 
 
-<section id="demo-olea">
+<section id="demo-activity">
 <div class="content">
-<h3>Activity</h3>
-TODO
+<h2>Activity</h2>
+
+<section id="demo-activity_overview">
+<div class="content">
+<h3>Activity overviews</h3>
+It is useful to have multiple ways to determine the activity for a project. Therefore it is possible to show the amount of time you <a href="#activity_time">spent</a> and also the amount of <a href="#activity_actions">actions</a>. Please don't get confused by the second one, because all of the actions are logged for the 07-30, but that's the date I created all of those demonstration projects. I logged some time for previous period, but didn't manipulate the database by myself to spread those actions similarly.
+</div>
+<img src="pictures/activity/project_activity/project-activity-time.png" alt="Activity time" class="picture" id="activity_time">
+<img src="pictures/activity/project_activity/project-activity-actions.png" alt="Activity actions" class="picture" id="activity_actions">
+
+
+
+<section id="demo-activity_streams">
+<div class="content">
+<h3>Activity Streams</h3>
+There are different kind of activity streams that can be customized to your personal needs. For example it is possible to list only our own activities on the <a href=#profile_page>profile page</a> while on the <a href=#start_page>start page</a> all activities for this project are shown.
+</div>
+<img src="pictures/activity/activity_streams/own_profile_page.png" alt="Profile page" class="picture" id="profile_page">
+<img src="pictures/activity/activity_streams/start_page.png" alt="start page" class="picture" id="start_page">
+</section>
 </div>
 </section>
+
 </body>
 </html>
