@@ -26,6 +26,10 @@ div.content{
 }
 /* this shall be used for previous and next section navigation tags in front of the table of content */
 div.pre_nav{
+	margin: auto;
+	text-align:left;
+	max-width: 1200px;
+	width: 90%;
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
