@@ -17,15 +17,24 @@ a:link, a:visited {
 	text-decoration: none;
 }
 
-h2{
-	margin-top: 70px;
-}
 
 div.content{
 	width: 80%;
 	max-width: 1000px;
 	margin: auto;
 	text-align:left;
+}
+/* this shall be used for previous and next section navigation tags in front of the table of content */
+div.pre_nav{
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+h2{
+	margin-top: 70px;
+}
+/* overwrite the margin-top to have a better margin with the pre_nav-div-tag */
+.toc h2{
+	margin-top: 0px;
 }
 
 
