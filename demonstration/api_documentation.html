@@ -42,7 +42,10 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 		<li><a href="overviews.html#navigation">Overviews</a></li>
 		<li><a href="api_documentation.html#navigation">API documentation</a></li>
 		<ul>
-			TODO
+			<li><a href="api_documentation.html#api_endpoints">Endpoints</a></li>
+			<li><a href="api_documentation.html#api_restrictions">Restrictions</a></li>
+			<li><a href="api_documentation.html#api_authentication">Authentication</a></li>
+			<li><a href="api_documentation.html#api_filters">Filters</a></li>
 		</ul>
 	</ul>
 </nav>
@@ -54,13 +57,131 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 <section id="demo-search">
 	<div class="content">
 		<h2>API documentation</h2>
-		TODO
+		<div id="api_endpoints">
+			<strong>endpoints:</strong>
+			<ul>
+				<li>
+					api/users/(GET) (1)
+				</li>
+				<li>
+					api/users/{username}/ (GET) (2)
+				</li>
+				<li>
+					api/timelogs/ (GET) (3)
+				</li>
+				<li>
+					api/issues/ (GET) (4)
+				</li>
+				<li>
+					api/projects/ (GET, POST) (5)
+				</li>
+				<li>
+					api/projects/{project_short_name}/ (GET, PUT, PATCH, DELETE) (6)
+				</li>
+				<li>
+					api/projects/{project_short_name}/issues/ (GET, POST) (7)
+				</li>
+				<li>
+					api/projects/{project_short_name}/issues/{issue_number}/ (GET, PUT, PATCH, DELETE) (8)
+				</li>
+				<li>
+					api/projects/{project_short_name}/issues/{issue_number}/timelogs/ (GET, POST) (9)
+				</li>
+				<li>
+					api/projects/{project_short_name}/issues/{issue_number}/timelogs/{timelog_number}/ (GET, PUT, PATCH, DELETE) (10)
+				</li>
+				<li>
+					api/projects/{project_short_name}/issues/{issue_number}/comments/(GET, POST) (11)
+				</li>
+				<li>
+					api/projects/{project_short_name}/issues/{issue_number}/comments/{comment_number}/ (GET, PUT, PATCH, DELETE) (12)
+				</li>
+				<li>
+					api/projects/{project_short_name}/timelogs/ (GET) (13)
+				</li>
+			</ul>
+		</div>
+		<div id="api_restrictions">
+			<strong>restrictions:</strong>
+			<ul>
+				<li>request.user has to be authenticated (1-12)</li>
+				<li>request.user has to be in project (6-13)</li>
+				<li>request.user has to be project manager (6(PUT/PATCH/DELETE))</li>
+				<li>request.user has to be owner(10/12(PUT/PATCH/DELETE))</li>
+			</ul>
+		</div>
+		<div id="api_authentication">
+			<strong>authentication:</strong>
+			<ul>
+				<li>HTTP Basic Authentication</li>
+			</ul>
+		</div>
+		<div id="api_filters">
+			<strong>filters:</strong>
+			<ul>
+				<li>Issuefilter(endpoints: 4,7)
+					<ul>
+						<li>
+							status(exact) <br \>?status=Done
+						</li>
+						<li>
+							assignee(contains)<br \>?assignee=user1&assigne=user2
+						</li>
+						<li>
+							participant(contains)<br \>?participant=user1
+						</li>
+						<li>
+							dependsOn(exact)<br \>?dependsOn=9 (makes only sense in project context, issue numbers are only unique in project )
+						</li>
+						<li>
+							sprint(exact)<br \>?sprint=5 (makes only sense in project context, sprint numbers are only unique in project )
+						</li>
+						<li>
+							project(exact, short_name)<br \>?project=TPJ
+						</li>
+						<li>
+							logged_total(gt, lt, exact)<br \>?logged_total__gt=2h30m&logged_total__lt=3h30m or ?logget_total=2h
+						</li>
+						<li>
+							priority(gt, lt, exact)<br \>?priority__gt=1 or ?priority=4
+						</li>
+						<li>
+							type(exact)<br \>?type=Bug or ?type=Task
+						</li>
+						<li>
+							due_date(exact, lt, gt)<br \>?due_date__lt=2017-05-05T16:47:00Z
+						</li>
+						<li>
+							created(exact, lt, gt)<br \>?created__gt=2017-04-03T00:00:00Z
+						</li>
+						<li>
+							storypoints(exact, lt, gt)<br \>?storypoints__gt=4&storypoints__lt=11
+						</li>
+						<li>
+							archived(exact)<br \>?archived=True
+						</li>
+					</ul>
+				</li>
+				<li>TimelogFilter(endpoints: 3, 9, 13)
+					<ul>
+						<li>
+							time(exact, lt, gt)<br \>?time__gt=2h15m&time__lt=3h
+						</li>
+						<li>
+							user(exact)<br \>?user=user1
+						</li>
+						<li>
+							created_at(exact, lt, gt)<br \>?created_at__gt=2017-04-03T00:00:00Z
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+<div class="pre_nav">
+	Go to <a href="overviews.html#navigation">previous(overviews)</a> section.
+</div>
 	</div>
 </section>
 </body>
 </html>
-
-
-<div class="pre_nav">
-	Go to <a href="overviews.html#navigation">previous(overviews)</a> section.
-</div>
