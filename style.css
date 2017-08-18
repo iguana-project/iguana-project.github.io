@@ -24,6 +24,14 @@ div.content{
 	margin: auto;
 	text-align:left;
 }
+/* please note: a better design would be the usage of scss and mixins - but copy n paste was the quicker and uglier fix */
+div.content_indent{
+	width: 80%;
+	max-width: 1000px;
+	margin: auto;
+	text-align:left;
+	text-indent:20px;
+}
 /* this shall be used for previous and next section navigation tags in front of the table of content */
 div.pre_nav{
 	margin: auto;
