@@ -1,3 +1,5 @@
+/* NOTE: a cleaner way than this header-duplication would be the usage of html-includes, but they don't work across many browser yet. :/ */
+
 body {
 	background-color: rgb(240, 240, 240);
 	color: rgb(40, 40, 40);
