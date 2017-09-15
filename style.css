@@ -74,11 +74,12 @@ img.picture_small {
 a.button {
 	display: inline-block;
 	background-color: #dddddd;
-	border: 1.5px solid #555555;
+	border: 1.5px solid #999999;
 	border-radius: 4px;
 	text-align: center;
 	font-size: 14px;
 	padding: 11px 11px;
 	margin-left: 1px;
 	margin-right: 1px;
+	box-shadow: 4px 3px 4px #aaaaaa;
 }
