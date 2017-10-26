@@ -73,13 +73,17 @@ img.picture_small {
 
 a.button {
 	display: inline-block;
-	background-color: #dddddd;
+	#background-color: #dddddd;
+	background-color: #95aac099;
 	border: 1.5px solid #999999;
-	border-radius: 4px;
+	border-radius: 3px;
 	text-align: center;
 	font-size: 14px;
-	padding: 11px 11px;
+	padding: 9px 9px;
 	margin-left: 1px;
 	margin-right: 1px;
-	box-shadow: 4px 3px 4px #aaaaaa;
+	box-shadow: 3px 2px 4px #aaaaaa;
+}
+a > span {
+	color: #aa2aad;
 }
