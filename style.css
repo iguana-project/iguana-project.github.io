@@ -3,6 +3,7 @@
 body {
 	background-color: rgb(240, 240, 240);
 	color: rgb(40, 40, 40);
+	padding-bottom: 30px;
 }
 header{
 	background-color: #28393e;
