@@ -271,6 +271,7 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 			<li>Some testcases throw multiple errors because some packages are deprecated. Until we have time to fix this see <em>make test-ign_imp_errors</em> to ignore them.</li>
 			<li>Search for attachment titels is not possible yet.</li>
 			<li>For the development settings the url that is send in the pw-reset-email is wrong.</li>
+			<li>The short names of projects are unique and limited to a max_length of four, which might be a problem for long term support or when many people want to create projects with the same short name or even if one would like to host iguana for the public. Therefore we might add an owner to each project to create the possibility to use the same short names multiple times, once for each owner. So the short name won't be unique for itself anymore. This is a possible solution, but we haven't decided yet whether we implement this or another one.</li>
 		</ul>
 	</div>
 </section>
