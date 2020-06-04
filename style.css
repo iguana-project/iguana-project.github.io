@@ -114,3 +114,24 @@ a.button {
 a > span {
 	color: #aa2aad;
 }
+div code{
+	background-color: #9a9a9a;
+	display: block;
+	padding-left: 40px;
+	font-family: monospace;
+	line-height: 1.5;
+	border-radius: 20px;
+	border: 1px solid black;
+	color: #00005f;
+}
+
+code comment{
+	color: #77e43a;
+}
+code insert{
+	color: #93dcf8;
+}
+code special{
+	#color: #ffca47;
+	color: #00f8cf;
+}

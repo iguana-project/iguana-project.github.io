@@ -315,6 +315,63 @@ You can get in on <a href="https://github.com/iguana-project/iguana">github</a>.
 			<div class="content">
 				Yes, therefore you can use the development environment (see <a href="https://github.com/iguana-project/iguana#development">Development</a>) and adjust some values within the settings files like <em>CAPTCHA_TEST_MODE</em>, <em>EMAIL_BACKEND</em> etc.
 			</div>
+			<h3>Is it possible to use postgreSQL locally instead of the default SQLite?</h3>
+			<div class="content">
+				Yes, this requires a few steps though.<br> <b>Attention</b>: This is not about migrating a SQLite database to postgreSQL or vice versa.
+				<ol>
+					<li>Install the required package for that
+						<pre><code>
+sudo apt-get install postgresql-server-dev-11
+echo "psycopg2==<insert>&ltversion&gt</insert>" >> requirements/development.req
+						</code></pre>
+					</li>
+					<li>create the database
+						<pre><code>
+<comment># postgres is the actual system user</comment>
+sudo -u postgres createdb <insert>&ltname of your database&gt</insert>
+						</code></pre>
+					</li>
+					<li>optionally import a dump from an existing postgres database
+					<pre><code>
+sudo -u postgres psql <insert>&ltname of your database&gt</insert> &lt <insert>&ltyour database dump file&gt</insert>
+					</code></pre>
+					</li>
+					<li>create a new postgres user
+						You might as well simply use the user <em>postgres</em> for this. But I like to create a separate user for a each database.
+						<pre><code>
+sudo -u postgres create <insert>&ltyour new postgres user for this project&gt</insert>
+sudo -u postgres psql
+<comment># The password must not be empty</comment>
+postgres=# alter user <insert>&ltyour new postgres user for this project&gt</insert> with
+                      encrypted password '<insert>&ltpassword for your new postgres user&gt</insert>';
+						</code></pre>
+					</li>
+					<li>
+						Change the <em>DATABASES</em> entry in the <em>local_conf.py</em>
+						<pre><code>
+# important: port needs to be empty and password must not be empty
+DATABASES = {
+	'default': {
+		'ENGINE':    django.db.backends.postgresql_psycopg2',
+		'NAME':     '<insert>&ltname of your database&gt</insert>',
+		'USER':     '<insert>&ltyour new postgres user for this project&gt</insert>',
+		'PASSWORD': '<insert>&ltpassword of your new postgres user - must not be empty&gt</insert>',
+		'HOST':     'localhost',
+		'PORT':     '',
+	}
+}
+						</code></pre>
+					</li>
+					<li>finalize and run
+					<pre><code>
+<comment># recreate the development to get the new dependencies and add the new database</comment>
+make development
+make migrate
+make run
+					</code></pre>
+					</li>
+				</ol>
+			</div>
 			<h3>TODO?</h3>
 			<div class="content">
 				<div class="todo" style="margin: 5px 5px 5px 5px;">TODO</div>
